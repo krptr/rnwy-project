@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <>
-      <header className="bg-surface/90 backdrop-blur flex justify-between font-sans items-center px-4 py-4 md:px-32 md:py-4 border-b border-outline-variant z-10 sticky top-0">
+      <header className="bg-surface/90 backdrop-blur flex justify-between font-sans items-center px-4 py-4 lg:px-32 lg:py-4 border-b border-outline-variant z-10 sticky top-0">
         <div>
           <Link to="/">
             <span className="text-on-background text-2xl font-black font-display tracking-tight">
