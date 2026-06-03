@@ -1,5 +1,5 @@
 function getNavlinkClass({ isActive }) {
-  return `text-sm hover:text-primary text-[10px] uppercase tracking-widest ${isActive ? "text-primary" : "text-on-surface"}`;
+  return `text-sm hover:text-primary text-[9px] uppercase tracking-widest ${isActive ? "text-primary" : "text-on-surface"}`;
 }
 
 function getNavlinkClassForMobile({ isActive }) {

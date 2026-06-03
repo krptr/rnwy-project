@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1,
+    "title": "Shadow Hoodie",
+    "price": 89.99,
+    "rating": 4.5,
+    "category": "tops",
+    "tags": ["hoodie", "oversized", "streetwear"],
+    "images": ["./assets/Tops/shadow-hoodie.jpg"]
+  },
+  {
+    "id": 2,
+    "title": "Essential Tee",
+    "price": 39.99,
+    "rating": 4.3,
+    "category": "tops",
+    "tags": ["tee", "heavyweight", "essential"],
+    "images": ["./assets/Tops/essential-tee.jpg"]
+  },
+  {
+    "id": 3,
+    "title": "Static Zip Hoodie",
+    "price": 94.99,
+    "rating": 4.6,
+    "category": "tops",
+    "tags": ["hoodie", "zip-up", "streetwear"],
+    "images": ["./assets/Tops/static-zip-hoodie.jpg"]
+  },
+  {
+    "id": 4,
+    "title": "Ribbed Crewneck",
+    "price": 74.99,
+    "rating": 4.4,
+    "category": "tops",
+    "tags": ["crewneck", "ribbed", "essential"],
+    "images": ["./assets/Tops/ribbed-crewneck.jpg"]
+  },
+  {
+    "id": 5,
+    "title": "Olive Pocket Tee",
+    "price": 44.99,
+    "rating": 4.2,
+    "category": "tops",
+    "tags": ["tee", "pocket", "olive"],
+    "images": ["./assets/Tops/olive-pocket-tee.jpg"]
+  },
+  {
+    "id": 6,
+    "title": "Field Cargo Pant",
+    "price": 109.99,
+    "rating": 4.7,
+    "category": "bottoms",
+    "tags": ["cargo", "pants", "utility"],
+    "images": ["./assets/Bottoms/field-cargo.jpg"]
+  },
+  {
+    "id": 7,
+    "title": "Washed Slim Jean",
+    "price": 99.99,
+    "rating": 4.4,
+    "category": "bottoms",
+    "tags": ["jeans", "slim", "denim"],
+    "images": ["./assets/Bottoms/washed-slim-jean.jpg"]
+  },
+  {
+    "id": 8,
+    "title": "Track Sweatpant",
+    "price": 79.99,
+    "rating": 4.5,
+    "category": "bottoms",
+    "tags": ["sweatpants", "track", "comfort"],
+    "images": ["./assets/Bottoms/track-sweatpant.jpg"]
+  },
+  {
+    "id": 9,
+    "title": "Khaki Cargo Pant",
+    "price": 104.99,
+    "rating": 4.3,
+    "category": "bottoms",
+    "tags": ["cargo", "khaki", "utility"],
+    "images": ["./assets/Bottoms/khaki-cargo-pant.jpg"]
+  },
+  {
+    "id": 10,
+    "title": "Wide Leg Trouser",
+    "price": 114.99,
+    "rating": 4.6,
+    "category": "bottoms",
+    "tags": ["trousers", "wide-leg", "editorial"],
+    "images": ["./assets/Bottoms/wide-leg-trouser.jpg"]
+  },
+  {
+    "id": 11,
+    "title": "Block Bomber",
+    "price": 159.99,
+    "rating": 4.8,
+    "category": "outerwear",
+    "tags": ["bomber", "jacket", "streetwear"],
+    "images": ["./assets/Outerwear/block-bomber.jpg"]
+  },
+  {
+    "id": 12,
+    "title": "Black Denim Jacket",
+    "price": 134.99,
+    "rating": 4.5,
+    "category": "outerwear",
+    "tags": ["denim", "jacket", "classic"],
+    "images": ["./assets/Outerwear/black-denim-jacket.jpg"]
+  },
+  {
+    "id": 13,
+    "title": "Cream Trench",
+    "price": 189.99,
+    "rating": 4.7,
+    "category": "outerwear",
+    "tags": ["trench", "coat", "editorial"],
+    "images": ["./assets/Outerwear/cream-trench.jpg"]
+  },
+  {
+    "id": 14,
+    "title": "Field Coach Jacket",
+    "price": 144.99,
+    "rating": 4.4,
+    "category": "outerwear",
+    "tags": ["coach", "jacket", "utility"],
+    "images": ["./assets/Outerwear/field-coach-jacket.jpg"]
+  },
+  {
+    "id": 15,
+    "title": "Grey Track Jacket",
+    "price": 124.99,
+    "rating": 4.3,
+    "category": "outerwear",
+    "tags": ["track", "jacket", "sport"],
+    "images": ["./assets/Outerwear/grey-track-jacket.jpg"]
+  },
+  {
+    "id": 16,
+    "title": "Studio Cap",
+    "price": 49.99,
+    "rating": 4.5,
+    "category": "accessories",
+    "tags": ["cap", "snapback", "headwear"],
+    "images": ["./assets/Accessories/studio-cap.jpg"]
+  },
+  {
+    "id": 17,
+    "title": "Canvas Tote",
+    "price": 54.99,
+    "rating": 4.4,
+    "category": "accessories",
+    "tags": ["bag", "tote", "canvas"],
+    "images": ["./assets/Accessories/canvas-tote.jpg"]
+  },
+  {
+    "id": 18,
+    "title": "Ribbed Beanie",
+    "price": 34.99,
+    "rating": 4.6,
+    "category": "accessories",
+    "tags": ["beanie", "ribbed", "headwear"],
+    "images": ["./assets/Accessories/ribbed-beanie.jpg"]
+  },
+  {
+    "id": 19,
+    "title": "Court Low Sneaker",
+    "price": 119.99,
+    "rating": 4.7,
+    "category": "footwear",
+    "tags": ["sneaker", "low-top", "court"],
+    "images": ["./assets/Footwear/court-low.jpg"]
+  },
+  {
+    "id": 20,
+    "title": "Chunky Sole Sneaker",
+    "price": 134.99,
+    "rating": 4.5,
+    "category": "footwear",
+    "tags": ["sneaker", "chunky", "bold"],
+    "images": ["./assets/Footwear/chunky-sole-sneaker.jpg"]
+  },
+  {
+    "id": 21,
+    "title": "Suede Chelsea Boot",
+    "price": 154.99,
+    "rating": 4.6,
+    "category": "footwear",
+    "tags": ["boots", "chelsea", "suede"],
+    "images": ["./assets/Footwear/suede-chelsea-boot.jpg"]
+  }
+]

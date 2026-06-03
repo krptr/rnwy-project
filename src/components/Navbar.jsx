@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router";
 import { useTheme } from "../hooks/useTheme";
-import { getNavlinkClass } from "../utils/navbar-utils/get-navlink-class";
-import { geThemeIcon } from "../utils/navbar-utils/get-theme";
+import { getNavlinkClass } from "../utils/get-navlink-class";
+import { geThemeIcon } from "../utils/get-theme";
 import { LuBell } from "react-icons/lu";
 import { navButtonClass, navIconClass } from "../utils/constants";
 import { MdOutlineShoppingCart } from "react-icons/md";
@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <>
-      <header className="bg-surface/90 backdrop-blur flex justify-between font-sans items-center px-4 py-4 lg:px-32 lg:py-4 border-b border-outline-variant z-10 sticky top-0">
+      <header className="bg-surface/90 backdrop-blur flex justify-between font-sans items-center px-4 py-4 lg:px-32 lg:py-4 border-b border-outline-variant z-20 sticky top-0">
         <div>
           <Link to="/">
             <span className="text-on-background text-2xl font-black font-display tracking-tight">
@@ -24,12 +24,12 @@ function Navbar() {
           </Link>
         </div>
 
-        <nav className="hidden md:flex gap-6">
+        <nav aria-label="Header Navigation" className="hidden md:flex gap-8">
           <NavLink to="/" className={getNavlinkClass}>
             Home
           </NavLink>
-          <NavLink to="/products" className={getNavlinkClass}>
-            Products
+          <NavLink to="/shop" className={getNavlinkClass}>
+            Shop
           </NavLink>
           <NavLink to="/cart" className={getNavlinkClass}>
             Cart

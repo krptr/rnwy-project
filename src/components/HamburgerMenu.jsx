@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import { useTheme } from "../hooks/useTheme";
-import { getNavlinkClassForMobile } from "../utils/navbar-utils/get-navlink-class";
-import { geThemeIcon, getThemeText } from "../utils/navbar-utils/get-theme";
+import { getNavlinkClassForMobile } from "../utils/get-navlink-class";
+import { geThemeIcon, getThemeText } from "../utils/get-theme";
 import { MdOutlineCancel } from "react-icons/md";
 
 function SideMenu({ updateMenu }) {
@@ -23,11 +23,11 @@ function SideMenu({ updateMenu }) {
           Home
         </NavLink>
         <NavLink
-          to="/products"
+          to="/shop"
           className={getNavlinkClassForMobile}
           onClick={updateMenu}
         >
-          Products
+          Shop
         </NavLink>
         <NavLink
           to="/cart"

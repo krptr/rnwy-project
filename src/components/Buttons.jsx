@@ -1,3 +1,5 @@
+import { twMerge } from "tailwind-merge";
+
 function Button({
   onClick,
   children,
@@ -34,7 +36,13 @@ function Button({
   return (
     <button
       onClick={onClick}
-      className={`${base} ${variants[variant]} ${sizes[size]} ${radii[radius]} ${className}`}
+      className={twMerge(
+        base,
+        variants[variant],
+        sizes[size],
+        radii[radius],
+        className,
+      )}
     >
       {children}
     </button>
