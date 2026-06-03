@@ -1,7 +1,9 @@
 import { Button } from "../../../components/Buttons";
 import hero from "../../../assets/hero.jpg";
+import { useNavigate } from "react-router";
 
 function HeroSection() {
+  const navigate = useNavigate();
   return (
     <section className="bg-surface-container-lowest grid grid-cols-1 lg:grid-cols-12 lg:pt-20 lg:pb-24 px-4 sm:px-6 md:px-8 lg:px-32">
       <div className="col-span-7 py-8">
@@ -23,10 +25,25 @@ function HeroSection() {
         </div>
 
         <div className="flex gap-3 mb-16">
-          <Button variant="primary" size="md" radius="xxl">
+          <Button
+            onClick={() => navigate("/shop")}
+            variant="primary"
+            size="md"
+            radius="xxl"
+          >
             Shop Now <span>→</span>
           </Button>
-          <Button variant="outline" size="md" radius="xxl">
+
+          <Button
+            onClick={() =>
+              document
+                .getElementById("featured-products")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+            variant="outline"
+            size="md"
+            radius="xxl"
+          >
             Our Story
           </Button>
         </div>

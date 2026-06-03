@@ -41,23 +41,23 @@ function Footer() {
             aria-label="Footer Navigation"
             className="flex flex-col lg:gap-4 text-on-surface-variant"
           >
-            <Link>
-              <span>New Arrivals</span>
-            </Link>
-            <Link>
+            <Link to="/shop?category=tops">
               <span>Tops</span>
             </Link>
-            <Link>
+            <Link to="/shop?category=bottoms">
               <span>Bottoms</span>
             </Link>
-            <Link>
+            <Link to="/shop?category=outerwear">
               <span>Outerwear</span>
             </Link>
-            <Link>
+            <Link to="/shop?category=accessories">
               <span>Accessories</span>
             </Link>
-            <Link>
+            <Link to="/shop?category=footwear">
               <span>Footwear</span>
+            </Link>
+            <Link to="/shop?category=all">
+              <span>New Arrivals</span>
             </Link>
           </nav>
         </div>

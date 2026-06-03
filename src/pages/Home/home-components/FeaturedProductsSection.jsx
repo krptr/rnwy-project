@@ -12,7 +12,10 @@ function FeaturedProductsSection() {
   ];
 
   return (
-    <section className="bg-surface-container px-16 py-16 md:px-32 md:py-24">
+    <section
+      id="featured-products"
+      className="bg-surface-container px-16 py-16 md:px-32 md:py-24"
+    >
       <span className="block smallcaps font-sans text-[9px] uppercase text-on-surface-variant tracking-[0.2em] mb-4">
         The Edit
       </span>
