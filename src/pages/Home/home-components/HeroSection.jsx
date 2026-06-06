@@ -1,6 +1,7 @@
 import { Button } from "../../../components/Buttons";
 import hero from "../../../assets/hero.jpg";
 import { useNavigate } from "react-router";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 function HeroSection() {
   const navigate = useNavigate();
@@ -31,13 +32,16 @@ function HeroSection() {
             size="md"
             radius="xxl"
           >
-            Shop Now <span>→</span>
+            Shop Now{" "}
+            <span>
+              <FaArrowRightLong />
+            </span>
           </Button>
 
           <Button
             onClick={() =>
               document
-                .getElementById("featured-products")
+                .getElementById("our-story")
                 .scrollIntoView({ behavior: "smooth" })
             }
             variant="outline"
@@ -50,7 +54,7 @@ function HeroSection() {
 
         <div className="border-t border-outline-variant flex gap-16 md:w-3/5 pt-8">
           <span className="font-display font-black text-2xl w-1/4 text-on-background">
-            O4
+            04
             <span className=" block mt-2 smallcaps font-sans text-[8px] uppercase text-on-surface-variant tracking-[0.2em] font-normal">
               Drops/Yr
             </span>

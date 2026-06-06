@@ -41,22 +41,64 @@ function Footer() {
             aria-label="Footer Navigation"
             className="flex flex-col lg:gap-4 text-on-surface-variant"
           >
-            <Link to="/shop?category=tops">
+            <Link
+              to="/shop?category=tops"
+              onClick={() =>
+                document
+                  .getElementById("shop")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
               <span>Tops</span>
             </Link>
-            <Link to="/shop?category=bottoms">
+            <Link
+              to="/shop?category=bottoms"
+              onClick={() =>
+                document
+                  .getElementById("shop")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
               <span>Bottoms</span>
             </Link>
-            <Link to="/shop?category=outerwear">
+            <Link
+              to="/shop?category=outerwear"
+              onClick={() =>
+                document
+                  .getElementById("shop")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
               <span>Outerwear</span>
             </Link>
-            <Link to="/shop?category=accessories">
+            <Link
+              to="/shop?category=accessories"
+              onClick={() =>
+                document
+                  .getElementById("shop")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
               <span>Accessories</span>
             </Link>
-            <Link to="/shop?category=footwear">
+            <Link
+              to="/shop?category=footwear"
+              onClick={() =>
+                document
+                  .getElementById("shop")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
               <span>Footwear</span>
             </Link>
-            <Link to="/shop?category=all">
+            <Link
+              to="/shop?category=all"
+              onClick={() =>
+                document
+                  .getElementById("shop")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
               <span>New Arrivals</span>
             </Link>
           </nav>

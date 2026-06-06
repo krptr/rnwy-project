@@ -3,8 +3,10 @@ import { Button } from "./Buttons";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { useState } from "react";
+import { capitalizeFirstLetter } from "../utils/capitalize-first-letter";
+import { Link } from "react-router";
 
-function FeaturedProductCard({ product }) {
+function BestSellersCard({ product }) {
   const { title, category, price } = product;
   const image = productImages[title];
 
@@ -103,6 +105,38 @@ function ShopProductCard({ product }) {
   );
 }
 
+function ShopByCategoryCard({ product, categoryCount }) {
+  const { category, title } = product;
+  const image = productImages[title];
+
+  const categoryName = capitalizeFirstLetter(category);
+  return (
+    <Link
+      to={`/shop?category=${category}`}
+      onClick={() =>
+        document.getElementById("shop").scrollIntoView({ behavior: "smooth" })
+      }
+    >
+      <div className="group relative w-full h-full rounded-xl overflow-hidden">
+        <div className="absolute inset-x-4 bottom-4 z-10">
+          <span className="block font-bold font-display text-background">
+            {categoryName}
+          </span>
+          <span className="font-sans text-[8px] uppercase text-background/70 tracking-[0.2em]">
+            {categoryCount} Pieces
+          </span>
+        </div>
+        <div className="absolute inset-0 z-5 bg-linear-to-t from-on-background/70 via-on-background/10 to-transparent pointer-events-none" />
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-full object-cover object-top transition-transform duration-1000 ease-out group-hover:scale-110"
+        />
+      </div>
+    </Link>
+  );
+}
+
 // Rating
 function StarRating({ rating }) {
   return (
@@ -122,4 +156,4 @@ function StarRating({ rating }) {
   );
 }
 
-export { FeaturedProductCard, ShopProductCard };
+export { BestSellersCard, ShopProductCard, ShopByCategoryCard };

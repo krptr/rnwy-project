@@ -1,12 +1,18 @@
 import { HeroSection } from "./home-components/HeroSection";
-import { FeaturedProductsSection } from "./home-components/FeaturedProductsSection";
+import { ShopByCategorySection } from "./home-components/ShopByCategorySection";
+import { BestSellersSection } from "./home-components/BestSellersSection";
+import { OurStory } from "./home-components/OurStorySection";
+import { CustomerReviewSection } from "./home-components/CustomerReviewSection";
 import { SubscriberListSection } from "./home-components/SubscriberListSection";
 
 function HomePage() {
   return (
     <>
       <HeroSection />
-      <FeaturedProductsSection />
+      <ShopByCategorySection />
+      <BestSellersSection />
+      <OurStory />
+      <CustomerReviewSection />
       <SubscriberListSection />
     </>
   );
