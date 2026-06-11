@@ -6,102 +6,118 @@ import { useState } from "react";
 import { capitalizeFirstLetter } from "../utils/capitalize-first-letter";
 import { Link } from "react-router";
 
-function BestSellersCard({ product }) {
-  const { title, category, price } = product;
+function FeaturedProductCard({ product }) {
+  const { id, title, category, price } = product;
   const image = productImages[title];
 
   return (
-    <div className="flex flex-col">
-      <div className="relative w-full h-full overflow-hidden rounded-xl">
-        <div className="bg-surface p-1 absolute top-3 left-3 smallcaps font-sans text-[8px] uppercase text-on-surface-variant tracking-[0.2em] z-10">
-          {category}
+    <Link to={`/shop/${id}`}>
+      <div className="flex flex-col">
+        <div className="relative w-full aspect-4/5 overflow-hidden rounded-xl">
+          <div className="bg-surface p-1 absolute top-3 left-3 smallcaps font-sans text-[8px] uppercase text-on-surface-variant tracking-[0.2em] z-10">
+            {category}
+          </div>
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover object-top transition-transform duration-1000 ease-out hover:scale-110"
+          />
         </div>
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover object-top transition-transform duration-1000 ease-out hover:scale-110"
-        />
-      </div>
 
-      <div className="flex justify-between mt-4">
-        <div>
-          <span className="font-display font-bold text-on-background text-lg tracking-tight">
-            {title}
-          </span>
-          <span className="block text-primary font-sans font-semibold text-sm">
-            ${price}
-          </span>
+        <div className="flex justify-between mt-4">
+          <div>
+            <span className="font-display font-bold text-on-background text-lg tracking-tight">
+              {title}
+            </span>
+            <span className="block text-primary font-sans font-semibold text-sm">
+              ${price}
+            </span>
+          </div>
+          <Button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+            }}
+            variant="outline"
+            className="hover:bg-primary hover:text-on-primary w-10 h-10 p-0 font-bold"
+          >
+            <FiPlus className="h-4 w-4" />
+          </Button>
         </div>
-        <Button
-          variant="outline"
-          className="hover:bg-primary hover:text-on-primary w-10 h-10 p-0 font-bold"
-        >
-          <FiPlus className="h-4 w-4" />
-        </Button>
       </div>
-    </div>
+    </Link>
   );
 }
 
 function ShopProductCard({ product }) {
-  const { title, price, category, rating } = product;
+  const { id, title, price, category, rating } = product;
   const image = productImages[title];
   const [count, setCount] = useState(1);
 
   return (
-    <div className="flex flex-col">
-      <div className="relative w-full h-full overflow-hidden rounded-t-xl">
-        <div className="bg-surface p-1 absolute top-3 left-3 smallcaps font-sans text-[8px] uppercase text-on-surface-variant tracking-[0.2em] z-10">
-          {category}
-        </div>
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover object-top transition-transform duration-1000 ease-out hover:scale-110"
-        />
-      </div>
-
-      <div className="bg-surface-container-lowest rounded-b-xl px-4 py-6">
-        <div className="flex justify-between items-center">
-          <span className="font-display font-bold text-on-background text-base md:text-[22px] tracking-tight">
-            {title}
-          </span>
-          <span className="font-display font-[1000] text-primary text-base md:text-xl">
-            ${price}
-          </span>
-        </div>
-
-        <div className="flex justify-start items-center gap-3 mb-4 mt-2">
-          <StarRating rating={rating} />
-          <span className="font-sans text-sm text-on-surface">{rating}</span>
-        </div>
-
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-3 justify-around px-2 border border-outline-variant rounded-3xl w-30 h-10">
-            <button
-              onClick={() => setCount((prev) => Math.max(1, prev - 1))}
-              aria-label="Decrease quantity"
-              className="hover:text-primary"
-            >
-              <FiMinus className="w-4 h-4" />
-            </button>
-
-            <span>{count}</span>
-
-            <button
-              onClick={() => setCount((prev) => prev + 1)}
-              aria-label="Increase quantity"
-              className="hover:text-primary"
-            >
-              <FiPlus className="w-4 h-4" />
-            </button>
+    <Link to={`/shop/${id}`}>
+      <div className="flex flex-col">
+        <div className="relative w-full aspect-4/5 overflow-hidden rounded-t-xl">
+          <div className="bg-surface p-1 absolute top-3 left-3 smallcaps font-sans text-[8px] uppercase text-on-surface-variant tracking-[0.2em] z-10">
+            {category}
           </div>
-          <Button variant="primary" className="md:w-45 2xl:w-50 h-10">
-            Add to cart
-          </Button>
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover object-top transition-transform duration-1000 ease-out hover:scale-110"
+          />
+        </div>
+
+        <div className="bg-surface-container-lowest rounded-b-xl px-4 py-6">
+          <div className="flex justify-between items-center">
+            <span className="font-display font-bold text-on-background text-base md:text-[22px] tracking-tight">
+              {title}
+            </span>
+            <span className="font-display font-[1000] text-primary text-base md:text-xl">
+              ${price}
+            </span>
+          </div>
+
+          <div className="flex justify-start items-center gap-3 mb-4 mt-2">
+            <StarRating rating={rating} />
+            <span className="font-sans text-sm text-on-surface">{rating}</span>
+          </div>
+
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-3 justify-around px-2 border border-outline-variant rounded-3xl w-30 h-10">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setCount((prev) => prev + 1);
+                }}
+                aria-label="Decrease quantity"
+                className="text-on-surface-variant hover:text-primary"
+              >
+                <FiMinus className="w-4 h-4" />
+              </button>
+
+              <span className="text-on-surface-variant">{count}</span>
+
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setCount((prev) => prev + 1);
+                }}
+                aria-label="Increase quantity"
+                className="text-on-surface-variant hover:text-primary"
+              >
+                <FiPlus className="w-4 h-4" />
+              </button>
+            </div>
+            <Button variant="primary" className="md:w-45 2xl:w-50 h-10">
+              Add to cart
+            </Button>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -137,6 +153,49 @@ function ShopByCategoryCard({ product, categoryCount }) {
   );
 }
 
+function RelatedProductCard({ product }) {
+  const { id, title, category, price } = product;
+  const image = productImages[title];
+
+  return (
+    <Link to={`/shop/${id}`}>
+      <div className="flex flex-col">
+        <div className="relative w-full aspect-4/5 overflow-hidden rounded-xl">
+          <div className="bg-surface p-1 absolute top-3 left-3 font-sans text-[8px] uppercase text-on-surface-variant tracking-[0.2em] z-10">
+            {category}
+          </div>
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover object-top transition-transform duration-1000 ease-out hover:scale-110"
+          />
+        </div>
+
+        <div className="flex justify-between mt-4">
+          <div>
+            <span className="font-display font-bold text-on-background text-lg tracking-tight">
+              {title}
+            </span>
+            <span className="block text-primary font-sans font-semibold text-sm">
+              ${price}
+            </span>
+          </div>
+          <Button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+            }}
+            variant="outline"
+            className="hover:bg-primary hover:text-on-primary w-10 h-10 p-0 font-bold"
+          >
+            <FiPlus className="h-4 w-4" />
+          </Button>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
 // Rating
 function StarRating({ rating }) {
   return (
@@ -156,4 +215,9 @@ function StarRating({ rating }) {
   );
 }
 
-export { BestSellersCard, ShopProductCard, ShopByCategoryCard };
+export {
+  FeaturedProductCard,
+  ShopProductCard,
+  ShopByCategoryCard,
+  RelatedProductCard,
+};

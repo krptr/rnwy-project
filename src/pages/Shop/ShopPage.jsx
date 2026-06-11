@@ -4,6 +4,7 @@ import { ShopSection } from "./shop-components/ShopSection";
 import { useState } from "react";
 import { useProducts } from "../../hooks/useProducts";
 import { useSearchParams } from "react-router";
+import { ErrorPage } from "../ErrorPage";
 
 function ShopPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -28,6 +29,8 @@ function ShopPage() {
       if (sortBy == "price-desc") return b.price - a.price;
       return 0;
     });
+
+  if (!activeCategory) return <ErrorPage />;
 
   return (
     <>

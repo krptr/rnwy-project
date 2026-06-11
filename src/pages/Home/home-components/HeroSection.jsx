@@ -74,8 +74,7 @@ function HeroSection() {
         </div>
       </div>
 
-      {/* Hero-Image Carousel Container */}
-      <div className="col-span-5 w-full aspect-2/3 relative p-4 lg:p-6 bg-surface-container-lowest">
+      <div className="col-span-5 w-full aspect-3/4 relative p-4 lg:p-6 bg-surface-container-lowest">
         <div
           aria-hidden="true"
           className="absolute inset-0 border-2 border-primary rounded-2xl pointer-events-none"
@@ -87,7 +86,7 @@ function HeroSection() {
           </div>
           <div className="absolute bg-surface/85 backdrop-blur px-4 py-1 rounded-xl bottom-4 left-4">
             <span className="font-sans text-[8px] text-on-surface-variant smallcaps uppercase tracking-widest">
-              Feel 01
+              Feel
               <span className="block font-extrabold font-display text-on-background text-[12px] normal-case">
                 Shadow Hoodie
               </span>

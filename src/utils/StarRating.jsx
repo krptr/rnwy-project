@@ -1,16 +1,16 @@
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
-function StarRating({ rating }) {
+function StarRating({ rating, className = "text-primary text-md" }) {
   return (
     <div className="flex items-center gap-1.5">
       {[1, 2, 3, 4, 5].map((star) => (
         <span key={star}>
           {rating >= star ? (
-            <FaStar className="text-primary text-md" />
+            <FaStar className={className} />
           ) : rating >= star - 0.5 ? (
-            <FaStarHalfAlt className="text-primary text-md" />
+            <FaStarHalfAlt className={className} />
           ) : (
-            <FaRegStar className="text-primary text-md" />
+            <FaRegStar className={className} />
           )}
         </span>
       ))}

@@ -49,11 +49,21 @@ function CustomerReviewSection() {
         </div>
 
         <div className="flex flex-wrap gap-10 font-black font-display text-lg tracking-tight text-on-surface-variant/60">
-          <div>The Drop</div>
-          <div>Capsule Weekly</div>
-          <div>Culture Press</div>
-          <div>DRIP Magazine</div>
-          <div>Street Edition</div>
+          <div className="transition-transform duration-1000 ease-out hover:scale-110">
+            The Drop
+          </div>
+          <div className="transition-transform duration-1000 ease-out hover:scale-110">
+            Capsule Weekly
+          </div>
+          <div className="transition-transform duration-1000 ease-out hover:scale-110">
+            Culture Press
+          </div>
+          <div className="transition-transform duration-1000 ease-out hover:scale-110">
+            DRIP Magazine
+          </div>
+          <div className="transition-transform duration-1000 ease-out hover:scale-110">
+            Street Edition
+          </div>
         </div>
       </div>
     </section>
